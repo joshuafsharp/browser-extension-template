@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "<name in manifest.json>",
-  "description": "<description in manifest.json>",
+  "name": "Anything Podcast",
+  "description": "Create podcasts from web content using Notebook LM",
   "options_ui": {
     "page": "src/pages/options/index.html"
   },
@@ -22,8 +22,15 @@
     "128": "icon-128.png"
   },
   "permissions": [
-    "activeTab"
+    "storage",
+    "identity",
+    "activeTab",
+    "tabs"
   ],
+  "oauth2": {
+    "client_id": "1029471186798-mm57rhhl7lmlsc3cbd3ppi3l4a9fhulk.apps.googleusercontent.com",
+    "scopes": ["openid", "email", "profile"]
+  },
   "content_scripts": [
     {
       "matches": [
@@ -49,5 +56,6 @@
       ],
       "matches": []
     }
-  ]
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3mgZ8ZklH1sV6z5iqifY3cJQvw3t7YCs8tVDRFo5WPO4ml2yBTb4iXCy8eYhhziY45MHLeQ7KvPKfDnOwWpMXLZ5xUszCluN2aEOYtRTYrcPEeiMNN199ktZajSOBa8FaHyltcWr6rw/mV34dmn5VDheUzMqOnemDrtQc9KZVs302tZmwCrWTd/FHijvaM+EXU2wPqqhcjvg+FXbH3kueaeJMKeYE+FNGOUU00lyURMcnWjJPLJATVbTgJzIznz44aBb2orjnI5rJ6W+Fs7C6w2nlBFPb1nZMevbRInPWCDnnURqVuw4PNs4Q+8rNvzKDdOD4MRLbN2gigiaeBESwIDAQAB"
 }
